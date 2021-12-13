@@ -1,3 +1,4 @@
+import { Filmeu } from './../models/Filmeu.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,27 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo = 'Filmeus';
+
+  listaFilmes: Filmeu[] = [
+    {
+      nome: 'Transformers: O lado Oculto da Lua',
+      lancamento: '29/06/2011',
+      duracao: '2h 34m',
+      classificacao: 61,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ks8rCjVBG7clohwHVu0TIpEB4Q.jpg',
+      generos: ['Ação', 'Ficção científica', 'Aventura']
+    },
+    {
+      nome: 'Piratas do Caribe: No Fim do Mundo',
+      lancamento: '25/05/2007',
+      duracao: '2h 49m',
+      classificacao: 72,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/j15lZasREutscon6e61LSSNJoN7.jpg',
+      generos: ['Aventura', 'Fantasia', 'Ação']
+    }
+  ];
 
   constructor(public alertController: AlertController, public toastController: ToastController) {}
 
@@ -38,7 +60,7 @@ export class Tab1Page {
     const toast = await this.toastController.create({
       message: 'Filme preferido favoritado!',
       duration: 2000,
-      color: 'secondary'
+      color: 'success'
     });
     toast.present();
   }

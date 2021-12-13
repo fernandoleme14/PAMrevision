@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="medium">
-    <ion-title color="dark"> Filmeus </ion-title>
+    <ion-title color="dark"> {{titulo}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,17 +17,17 @@
         <ion-label>
           <div class="ion-text-wrap">
             <h1>Transformers: O lado Oculto da Lua</h1>
-            <p>29/06/2011 (BR)</p>
+            <p>29/06/2011 (BR) - 2h 34m</p>
             <p>Ação, Ficção científica, Aventura</p>
           </div>
         </ion-label>
-        <ion-chip outline>
+        <ion-chip outline color="secondary">
           <ion-label>61%</ion-label>
         </ion-chip>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option  (click)="apresentarAlertaFavorito()">
+        <ion-item-option  (click)="apresentarAlertaFavorito()" color="primary">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
@@ -42,17 +42,17 @@
         <ion-label>
           <div class="ion-text-wrap">
             <h1>Piratas do Caribe: No Fim do Mundo</h1>
-            <p>25/05/2007 (BR)</p>
+            <p>25/05/2007 (BR) - 2h 49m</p>
             <p>Aventura, Fantasia, Ação</p>
           </div>
         </ion-label>
-        <ion-chip outline>
+        <ion-chip outline color="tertiary">
           <ion-label>72%</ion-label>
         </ion-chip>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option  (click)="apresentarAlertaFavorito()">
+        <ion-item-option  (click)="apresentarAlertaFavorito()" color="primary">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
